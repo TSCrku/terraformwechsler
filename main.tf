@@ -1,7 +1,5 @@
 resource "azurerm_resource_group" "tscrg" {
-  name     = "rg-terraform-test"
-  location = "West Europe"
-  tags = {
-    source = "terraform"
-  }
+  name     = var.azure_rg_name
+  location = var.azure_location
+  tags = local.tags
 }
